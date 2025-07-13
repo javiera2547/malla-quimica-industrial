@@ -1,41 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Malla Química</title>
-  <style>
-    body { font-family: Arial; }
-    .ramo {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin: 5px;
-      display: inline-block;
-      cursor: pointer;
-    }
-    .ramo:hover {
-      background-color: #f0f0f0;
-    }
-  </style>
+  <title>Malla Química Industrial</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Malla Química Industrial</h1>
-  <div id="malla">
-    <div class="ramo" onclick="verDetalle('Química General')">Química General</div>
-    <div class="ramo" onclick="verDetalle('Cálculo I')">Cálculo I</div>
-    <div class="ramo" onclick="verDetalle('Física')">Física</div>
+  <h1>Malla Curricular – Química Industrial</h1>
+  <div class="malla">
+
+    <!-- Ramo ejemplo -->
+    <div class="ramo" id="quimica_general" data-nombre="Química General I" data-requisitos="">
+      Química General I
+    </div>
+
+    <div class="ramo bloqueado" id="quimica_inorganica_I" data-nombre="Química Inorgánica I" data-requisitos="quimica_general">
+      Química Inorgánica I
+    </div>
+
+    <div class="ramo bloqueado" id="quimica_inorganica_II" data-nombre="Química Inorgánica II" data-requisitos="quimica_inorganica_I">
+      Química Inorgánica II
+    </div>
+
+    <!-- Agrega aquí más ramos siguiendo la misma estructura -->
+    
   </div>
 
-  <div id="detalle" style="margin-top:20px;"></div>
-
-  <script>
-    function verDetalle(ramo) {
-      const descripciones = {
-        "Química General": "Estudia la estructura de la materia y las reacciones químicas.",
-        "Cálculo I": "Introduce el análisis de funciones reales de una variable.",
-        "Física": "Cubre mecánica clásica, cinemática y dinámica."
-      };
-      document.getElementById("detalle").innerHTML = `<strong>${ramo}:</strong> ${descripciones[ramo]}`;
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
