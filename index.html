@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Química</title>
+  <style>
+    body { font-family: Arial; }
+    .ramo {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 5px;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .ramo:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Química Industrial</h1>
+  <div id="malla">
+    <div class="ramo" onclick="verDetalle('Química General')">Química General</div>
+    <div class="ramo" onclick="verDetalle('Cálculo I')">Cálculo I</div>
+    <div class="ramo" onclick="verDetalle('Física')">Física</div>
+  </div>
+
+  <div id="detalle" style="margin-top:20px;"></div>
+
+  <script>
+    function verDetalle(ramo) {
+      const descripciones = {
+        "Química General": "Estudia la estructura de la materia y las reacciones químicas.",
+        "Cálculo I": "Introduce el análisis de funciones reales de una variable.",
+        "Física": "Cubre mecánica clásica, cinemática y dinámica."
+      };
+      document.getElementById("detalle").innerHTML = `<strong>${ramo}:</strong> ${descripciones[ramo]}`;
+    }
+  </script>
+</body>
+</html>
