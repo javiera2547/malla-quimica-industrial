@@ -1,0 +1,31 @@
+body {
+  font-family: Arial;
+  margin: 30px;
+  background: #f9f9f9;
+}
+h1 {
+  text-align: center;
+  color: #004d4d;
+}
+.semestre {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
+.ramo {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 15px;
+  border: 1px solid #004d4d;
+  border-radius: 8px;
+  background: #e0f7fa;
+  cursor: pointer;
+}
+.ramo:hover {
+  background: #b2ebf2;
+}
+#detalle {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fffde7;
+  border-left: 4px solid #ffeb3b;
+}
