@@ -9,22 +9,73 @@
 <body>
   <h1>Malla Curricular – Química Industrial</h1>
   <div class="malla">
+    <!-- Primer Año -->
+    <div class="ramo" id="matematica" data-requisitos="">Matemática</div>
+    <div class="ramo" id="habilidades" data-requisitos="">Habilidades Comunicativas</div>
+    <div class="ramo" id="quimica1" data-requisitos="">Química General I</div>
+    <div class="ramo" id="intro_qi" data-requisitos="">Introducción a la Química Industrial</div>
+    <div class="ramo" id="fgv1" data-requisitos="">FG Valórica I</div>
 
-    <!-- Ramo ejemplo -->
-    <div class="ramo" id="quimica_general" data-nombre="Química General I" data-requisitos="">
-      Química General I
-    </div>
+    <div class="ramo bloqueado" id="calculo1" data-requisitos="matematica">Cálculo I</div>
+    <div class="ramo bloqueado" id="algebra" data-requisitos="matematica">Álgebra</div>
+    <div class="ramo bloqueado" id="quimica2" data-requisitos="quimica1">Química General II</div>
+    <div class="ramo bloqueado" id="fisica1" data-requisitos="matematica">Física I</div>
+    <div class="ramo" id="fge1" data-requisitos="">FG Electiva</div>
 
-    <div class="ramo bloqueado" id="quimica_inorganica_I" data-nombre="Química Inorgánica I" data-requisitos="quimica_general">
-      Química Inorgánica I
-    </div>
+    <!-- Segundo Año -->
+    <div class="ramo bloqueado" id="calculo2" data-requisitos="calculo1">Cálculo II</div>
+    <div class="ramo bloqueado" id="estadistica" data-requisitos="matematica">Estadística</div>
+    <div class="ramo bloqueado" id="qinorg1" data-requisitos="quimica2">Química Inorgánica I</div>
+    <div class="ramo bloqueado" id="fisica2" data-requisitos="fisica1">Física II</div>
+    <div class="ramo" id="ingles1" data-requisitos="">Inglés I</div>
 
-    <div class="ramo bloqueado" id="quimica_inorganica_II" data-nombre="Química Inorgánica II" data-requisitos="quimica_inorganica_I">
-      Química Inorgánica II
-    </div>
+    <div class="ramo bloqueado" id="qorganica1" data-requisitos="quimica2">Química Orgánica I</div>
+    <div class="ramo bloqueado" id="qanalitica1" data-requisitos="quimica2">Química Analítica I</div>
+    <div class="ramo bloqueado" id="qinorg2" data-requisitos="qinorg1">Química Inorgánica II</div>
+    <div class="ramo bloqueado" id="fisicoq1" data-requisitos="fisica2">Fisicoquímica I</div>
+    <div class="ramo bloqueado" id="ingles2" data-requisitos="ingles1">Inglés II</div>
+    <div class="ramo bloqueado" id="fgv2" data-requisitos="fgv1">FG Valórica II</div>
 
-    <!-- Agrega aquí más ramos siguiendo la misma estructura -->
-    
+    <!-- Tercer Año -->
+    <div class="ramo bloqueado" id="qorganica2" data-requisitos="qorganica1">Química Orgánica II</div>
+    <div class="ramo bloqueado" id="qanalitica2" data-requisitos="qanalitica1">Química Analítica II</div>
+    <div class="ramo bloqueado" id="fisicoq2" data-requisitos="fisicoq1">Fisicoquímica II</div>
+    <div class="ramo bloqueado" id="maquinaria" data-requisitos="fisicoq2">Maquinaria y Equipos</div>
+    <div class="ramo bloqueado" id="ingles3" data-requisitos="ingles2">Inglés III</div>
+
+    <div class="ramo bloqueado" id="qcuantica" data-requisitos="fisicoq2">Química Cuántica</div>
+    <div class="ramo bloqueado" id="analisis1" data-requisitos="fisicoq2,qanalitica2">Análisis Instrumental I</div>
+    <div class="ramo bloqueado" id="qorganometalica" data-requisitos="qinorg2,qorganica1">Química Organometálica</div>
+    <div class="ramo" id="gestionlab" data-requisitos="">Gestión de Laboratorio</div>
+    <div class="ramo bloqueado" id="ingles4" data-requisitos="ingles3">Inglés IV</div>
+
+    <!-- Cuarto Año -->
+    <div class="ramo bloqueado" id="opunitarias" data-requisitos="maquinaria">Operaciones Unitarias I</div>
+    <div class="ramo bloqueado" id="analisis2" data-requisitos="analisis1">Análisis Instrumental II</div>
+    <div class="ramo bloqueado" id="procmetales" data-requisitos="analisis2">Procesos Minerales Metálicos</div>
+    <div class="ramo" id="qambiental" data-requisitos="">Química Ambiental</div>
+    <div class="ramo" id="calidad" data-requisitos="">Gestión y Control de Calidad</div>
+    <div class="ramo" id="prevencion" data-requisitos="">Prevención y Gestión Ambiental</div>
+
+    <div class="ramo" id="procnometa" data-requisitos="">Procesos Minerales No Metálicos</div>
+    <div class="ramo" id="corrosion" data-requisitos="">Corrosión Industrial</div>
+    <div class="ramo" id="metodologia" data-requisitos="">Metodología Investigación</div>
+    <div class="ramo" id="residuos" data-requisitos="">Tratamiento de Residuos</div>
+    <div class="ramo" id="integrador1" data-requisitos="">Integrador I</div>
+    <div class="ramo bloqueado" id="fgv3" data-requisitos="fgv2">FG Valórica III</div>
+
+    <!-- Quinto Año -->
+    <div class="ramo" id="electiva1" data-requisitos="">Electiva Prof. I</div>
+    <div class="ramo" id="electiva2" data-requisitos="">Electiva Prof. II</div>
+    <div class="ramo" id="electiva3" data-requisitos="">Electiva Prof. III</div>
+    <div class="ramo bloqueado" id="innovacion" data-requisitos="procmetales">Innovación y Mejora</div>
+    <div class="ramo" id="practica" data-requisitos="">Práctica Profesional</div>
+    <div class="ramo" id="fge2" data-requisitos="">FG Electiva</div>
+
+    <div class="ramo" id="electiva4" data-requisitos="">Electiva Prof. IV</div>
+    <div class="ramo" id="electiva5" data-requisitos="">Electiva Prof. V</div>
+    <div class="ramo" id="integrador2" data-requisitos="">Integrador II</div>
+    <div class="ramo bloqueado" id="fgv4" data-requisitos="fgv3">FG Valórica IV</div>
   </div>
 
   <script src="script.js"></script>
