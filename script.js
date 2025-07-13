@@ -1,11 +1,23 @@
-const detalles = {
-  "Química General": "Introduce la estructura de la materia, enlaces químicos y reacciones.",
-  "Álgebra": "Estudia matrices, determinantes, sistemas lineales y más.",
-  "Cálculo I": "Funciones, límites, derivadas y aplicaciones.",
-  "Física I": "Mecánica clásica, cinemática y dinámica."
-};
+document.querySelectorAll('.ramo').forEach(ramo => {
+  if (!ramo.classList.contains('bloqueado')) {
+    ramo.addEventListener('click', () => aprobarRamo(ramo));
+  }
+});
 
-function verDetalle(ramo) {
-  const texto = detalles[ramo] || "Descripción no disponible.";
-  document.getElementById("detalle").innerHTML = `<strong>${ramo}:</strong> ${texto}`;
+function aprobarRamo(ramo) {
+  ramo.classList.add('aprobado');
+  ramo.removeEventListener('click', () => aprobarRamo(ramo));
+  desbloquearRamosDependientes(ramo.id);
+}
+
+function desbloquearRamosDependientes(idAprobado) {
+  document.querySelectorAll('.ramo.bloqueado').forEach(ramo => {
+    const requisitos = ramo.dataset.requisitos.split(',').map(r => r.trim()).filter(r => r);
+    const aprobados = requisitos.every(req => document.getElementById(req).classList.contains('aprobado'));
+
+    if (aprobados) {
+      ramo.classList.remove('bloqueado');
+      ramo.addEventListener('click', () => aprobarRamo(ramo));
+    }
+  });
 }
