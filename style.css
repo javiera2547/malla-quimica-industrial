@@ -14,23 +14,24 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 12px;
 }
 
 .ramo {
-  background-color: #cba4ff;
+  background-color: #d3b7f0;
   border: 2px solid #6a0dad;
-  padding: 15px 20px;
-  width: 180px;
-  height: 80px;
+  padding: 10px;
+  width: 200px;
+  min-height: 60px;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+  font-weight: bold;
+  transition: all 0.2s ease;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
-  transition: all 0.2s ease;
+  text-align: center;
 }
 
 .ramo:hover {
@@ -50,4 +51,3 @@ h1 {
   cursor: not-allowed;
   pointer-events: none;
 }
-
